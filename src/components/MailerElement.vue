@@ -32,7 +32,10 @@
       :right-toolbar="customRightToolbar" />
     <div class="line" style="width: 100%; background-color: #d1d1d1; height: 1px;"></div>
     <span class="bottom-bar">
-      <div class="button-s2">Attach Files</div>
+      <span class="span-box-1">
+        <div class="button-s2">Import Contacts</div>
+        <div class="button-s2">Attach Files</div>
+      </span>
       <div class="button-s1">Send</div>
     </span>
   </div>
@@ -161,7 +164,8 @@ let BCCToggle = ref(false)
   width: 100%;
   height: 2.5rem;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  padding: 0 1rem;
   align-items: center;
 }
 
@@ -175,7 +179,6 @@ let BCCToggle = ref(false)
   border-radius: 0.2rem;
   height: 2rem;
   padding: 0 2.5rem;
-  margin-right: 1rem;
   cursor: pointer;
 }
 
@@ -188,7 +191,7 @@ let BCCToggle = ref(false)
   border-radius: 0.2rem;
   height: 2rem;
   padding: 0 1rem;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   cursor: pointer;
 }
 </style>
