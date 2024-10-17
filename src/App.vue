@@ -1,14 +1,23 @@
-<script setup>
-import MailerElement from './components/MailerElement.vue'
-</script>
-
 <template>
   <div>
+    <ThemeToggle class="toggle" />
     <MailerElement />
   </div>
 </template>
 
-<style scoped></style>
+<script setup>
+import MailerElement from './components/MailerElement.vue'
+import ThemeToggle from './components/ThemeToggle.vue';
+</script>
+
+<style scoped>
+.toggle {
+  position: fixed;
+  top: 0rem;
+  right: 1rem;
+  display: hidden;
+}
+</style>
 
 <style>
 html {
