@@ -20,6 +20,20 @@ html {
     radial-gradient(at 82% 65%, hsl(198.00, 100%, 50%) 0, transparent 55%);
 }
 
+/*
+body {
+    background-color: #111927;
+    background-image: 
+        radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%), 
+        radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%);
+}
+*/
+
+div {
+  box-shadow: none !important;
+  /* To override MD Editor's default shadow styling */
+}
+
 body {
   height: 100%;
   width: 100%;
