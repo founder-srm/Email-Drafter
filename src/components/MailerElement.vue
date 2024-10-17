@@ -1,7 +1,7 @@
 <template>
   <div class="main">
-    <!-- Markdown Editor -->
-    <v-md-editor v-model="content" height="40vw" />
+    <v-md-editor v-model="content" height="40vw" :left-toolbar="customLeftToolbar"
+      :right-toolbar="customRightToolbar" />
   </div>
 </template>
 
@@ -29,6 +29,8 @@ VMdEditor.use(VuepressTheme, {
 });
 VMdEditor.lang.use('en-US', enUS);
 
+const customLeftToolbar = "undo redo clear | h bold italic strikethrough quote | ul ol table hr | link code"
+const customRightToolbar = "preview sync-scroll"
 </script>
 
 <style scoped>
