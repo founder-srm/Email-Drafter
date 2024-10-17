@@ -1,11 +1,34 @@
 <template>
     <div>
-        <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
+        <input type="checkbox" id="switch" /><label for="switch" @click="changeTheme">Toggle</label>
     </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 
+let isLightTheme = ref(true)
+
+function changeTheme() {
+    console.log(isLightTheme.value);
+    document.documentElement.style.removeProperty('background-color');
+    document.documentElement.style.removeProperty('background-image');
+    if (isLightTheme.value) {
+        document.documentElement.style.backgroundColor = '#111927'
+        document.documentElement.style.backgroundImage = `
+      radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%), 
+      radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%)
+  `
+    }
+    else {
+        document.documentElement.style.backgroundColor = '#50E3C2'
+        document.documentElement.style.backgroundImage = `
+    radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%),
+    radial-gradient(at 82% 65%, hsl(198.00, 100%, 50%) 0, transparent 55%);
+  `
+    }
+    isLightTheme.value = !isLightTheme.value
+}
 </script>
 
 <style scoped>
