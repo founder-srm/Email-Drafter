@@ -28,8 +28,13 @@
         </span>
       </span>
     </div>
-    <v-md-editor v-model="content" height="29vw" :left-toolbar="customLeftToolbar"
+    <v-md-editor v-model="content" height="30vw" :left-toolbar="customLeftToolbar"
       :right-toolbar="customRightToolbar" />
+    <div class="line" style="width: 100%; background-color: #d1d1d1; height: 1px;"></div>
+    <span class="bottom-bar">
+      <div class="button-s2">Attach Files</div>
+      <div class="button-s1">Send</div>
+    </span>
   </div>
 </template>
 
@@ -43,7 +48,7 @@ import hljs from 'highlight.js';
 
 import { ref } from 'vue';
 
-const content = ref('# Hello, Markdown! \n This is a **markdown editor**.');
+const content = ref('### Mail Client for Founders Club - DEI \n This is where your awesome E-Mail goes. To get started, **simply replace this text with your own!**');
 
 VMdEditor.use(VuepressTheme, {
   Hljs: hljs,
@@ -58,14 +63,20 @@ let BCCToggle = ref(false)
 </script>
 
 <style scoped>
+.v-md-editor {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  overflow: hidden;
+}
+
 .main {
   background-color: #fff;
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
-  height: 40vw;
+  height: 30%;
   width: 70vw;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  padding: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .header {
@@ -76,6 +87,7 @@ let BCCToggle = ref(false)
 }
 
 .logo {
+  margin-top: 0.5rem;
   max-height: 6rem;
   margin-right: 0.5rem;
 }
@@ -84,6 +96,7 @@ let BCCToggle = ref(false)
   display: flex;
   flex-direction: row;
   width: 100%;
+  padding: 0 0.5rem;
 }
 
 .header {
@@ -110,10 +123,13 @@ let BCCToggle = ref(false)
   margin-left: 0.5rem;
   border: 1px solid #d5d5d5;
   outline: transparent;
+  color: #424242;
+  padding-left: 0.5rem;
+  font-weight: 600;
   border-radius: 0.2rem;
-  font-size: 1rem;
-  height: 1.4rem;
-  width: 25rem;
+  font-size: 0.9rem;
+  height: 1.6rem;
+  width: 35vw;
 }
 
 .span-box-1,
@@ -139,5 +155,40 @@ let BCCToggle = ref(false)
 
 .active {
   color: #000000
+}
+
+.bottom-bar {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.button-s1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0F1425;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 0.2rem;
+  height: 2rem;
+  padding: 0 2.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.button-s2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #0F1425;
+  color: #0F1425;
+  border-radius: 0.2rem;
+  height: 2rem;
+  padding: 0 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
 }
 </style>
