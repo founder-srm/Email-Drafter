@@ -58,9 +58,11 @@ VMdEditor.use(VuepressTheme, {
 });
 VMdEditor.lang.use('en-US', enUS);
 
+// Custom toolbar properties
 const customLeftToolbar = "undo redo clear | h bold italic strikethrough quote | ul ol table hr | link code"
 const customRightToolbar = "preview sync-scroll"
 
+// Toggle for CC and BCC fields
 let CCToggle = ref(false)
 let BCCToggle = ref(false)
 </script>
